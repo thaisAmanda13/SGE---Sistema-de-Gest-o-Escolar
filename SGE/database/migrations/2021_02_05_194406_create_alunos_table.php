@@ -21,7 +21,6 @@ class CreateAlunosTable extends Migration
 
         });
     }
-
     /**
      * Reverse the migrations.
      *
