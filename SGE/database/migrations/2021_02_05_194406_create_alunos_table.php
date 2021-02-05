@@ -6,14 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateAlunosTable extends Migration
 {
-  
-
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
         Schema::create('alunos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('nome');
-            $table->string('email');
+            $table->string('email')->unique();
+            $table->string('senha');
 
         });
     }
