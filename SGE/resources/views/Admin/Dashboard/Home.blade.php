@@ -16,7 +16,7 @@
 </head>
 <body>
     <div id="app" class="container-for-admin">
-      <example-component></example-component>
+      <!-- <example-component></example-component> -->
         <!--Main Navigation-->
           <header>
         
