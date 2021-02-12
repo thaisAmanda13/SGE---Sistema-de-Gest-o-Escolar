@@ -24,3 +24,7 @@ Route::prefix('admin')->group(function() {
     Route::get('home',[DashboardController::class,'showHome'])->name('dashboard_home');
 });
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

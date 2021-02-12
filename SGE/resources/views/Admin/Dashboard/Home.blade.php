@@ -5,15 +5,18 @@
     
     
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+ 
 </head>
-
 <body>
-    <div class="container-for-admin">
+    <div id="app" class="container-for-admin">
+      <example-component></example-component>
         <!--Main Navigation-->
           <header>
         
@@ -21,10 +24,6 @@
             <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
               <div class="container-fluid">
         
-                <!-- Brand -->
-                <a class="navbar-brand waves-effect"  target="_blank">
-                  <strong class="blue-text">SISMUP</strong>
-                </a>
         
                 <!-- Collapse -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -37,14 +36,7 @@
         
                   <!-- Left -->
                   <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link waves-effect" href="#">Suporte
-                        <span class="sr-only">(current)</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link waves-effect"  target="_blank">Ajuda</a>
-                    </li>
+                    
                     
                   </ul>
         
@@ -68,24 +60,7 @@
             <!-- Sidebar -->
             <div class="sidebar-fixed position-fixed">
         
-              <a class="logo-wrapper waves-effect">
-                <h3> logotipo </h3>
-              </a>
-        
-              <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item active waves-effect">
-                  <i class="fa fa-pie-chart mr-3"></i>Nova postagem
-                </a>
-                <a href="#" class="list-group-item list-group-item-action waves-effect">
-                  <i class="fa fa-user mr-3"></i>Pré cadastros</a>
-                <a href="#" class="list-group-item list-group-item-action waves-effect">
-                  <i class="fa fa-table mr-3"></i>Prestação de contas</a>
-                <a href="#" class="list-group-item list-group-item-action waves-effect">
-                  <i class="fa fa-calendar mr-3"></i>Agênda do dia</a>
-                <a href="#" class="list-group-item list-group-item-action waves-effect">
-                  <i class="fa fa-config mr-3"></i>Configurações</a>
-                
-              </div>
+                <side-menu/>
         
             </div>
             <!-- Sidebar -->
@@ -128,12 +103,22 @@
                 
                 <div class="col-xs-12 mb-4 container">
                     <div class="card card-body">
-                            <label for="pagina"> Categoria </label>
+                            {{-- <label for="pagina"> Categoria </label>
                             <select id="pagina" class="form form-control" name="Categoria">
                                 <option> Prestação de contas </option>
                                 <option> Informativo </option>
-                            </select>
-                        
+                            </select> --}}
+                            <div class="form-outline">
+                              <input
+                                type="text"
+                                id="form1"
+                                class="form-control"
+                                data-mdb-showcounter="true"
+                                maxlength="20"
+                              />
+                              <label class="form-label" for="form1">Example label</label>
+                              <div class="form-helper"></div>
+                            </div>
                     </div>  
                 </div>
                 <!--Grid column-->
@@ -188,6 +173,7 @@
 </body>
 </html>
 
+<script src="{{ asset('js/app.js') }}"></script>
 
 <style>
     .sidebar-fixed{height:100vh;width:270px;-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);z-index:1050;background-color:#fff;padding:0 1.5rem 1.5rem}.sidebar-fixed .list-group .active{-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);-webkit-border-radius:5px;border-radius:5px}.sidebar-fixed .logo-wrapper{padding:2.5rem}.sidebar-fixed .logo-wrapper img{max-height:50px}@media (min-width:1200px){.navbar,.page-footer,main{padding-left:270px}}@media (max-width:1199.98px){.sidebar-fixed{display:none}}
